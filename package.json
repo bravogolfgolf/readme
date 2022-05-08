@@ -3,5 +3,8 @@
     "jsx-readme": "^1.18.0",
     "ts-node": "^10.7.0",
     "typescript": "^4.6.4"
+  },
+  "scripts": {
+    "generate:readme": "ts-node README.md.tsx"
   }
 }
