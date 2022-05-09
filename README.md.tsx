@@ -1,15 +1,15 @@
-// We need to tell the JSX transpiler that in this file,
-// instead of React we use the custom createElement and Fragment
-// functions from jsx-readme
 /* @jsx MD */
 /* @jsxFrag Fragment */
 import type {Component} from "jsx-readme";
 import MD, {Fragment, renderToFile,} from "jsx-readme";
-import {Heading} from 'jsx-md';
+import {BlockQuote, Heading, HorizontalRule, LineBreak} from 'jsx-md';
 
 const Readme: Component = () => (
     <Fragment>
-        <Heading level={1}>Hello World!</Heading>
+        <Heading level={6}>BlockQuote</Heading>
+        <HorizontalRule/>
+        <BlockQuote children={''}>Test1{'/n'}Test2</BlockQuote>
+        <LineBreak/>
     </Fragment>
 );
 void renderToFile("./README.md", <Readme/>);
